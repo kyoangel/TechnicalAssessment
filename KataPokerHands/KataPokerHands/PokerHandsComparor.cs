@@ -43,14 +43,6 @@ namespace KataPokerHands
             {
                 return "White wins. - with high card: " + cardNameMap[whiteList[4][0].ToString()];
             }
-            if (whiteList[4][0].Equals('A'))
-            {
-                return "White wins. - with high card: Ace";
-            }
-            if (whiteList[4][0].Equals('K'))
-            {
-                return "White wins. - with high card: King";
-            }
             return "";
         }
     }
