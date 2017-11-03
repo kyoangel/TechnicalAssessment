@@ -28,5 +28,15 @@ namespace KataPokerHands
             var actual = comparor.compare("2H 3D 5S 9C QD", "2C 3H 4S 8C KH");
             Assert.AreEqual("White wins. - with high card: King", actual);
         }
+
+        [TestMethod]
+        public void HighCard_Black_Win_Q()
+        {
+            var comparor = new PokerHandsComparor();
+            var actual = comparor.compare("2H 3D 5S 9C QD", "2C 3H 4S 8C JH");
+            Assert.AreEqual("Black wins. - with high card: Queen", actual);
+        }
+
+       
     }
 }
