@@ -6,8 +6,19 @@ namespace KataPokerHands
     public class KataPokerHandsTest
     {
         [TestMethod]
-        public void TestMethod1()
+        public void empty()
         {
+            var comparor = new PokerHandsComparor();
+            var actual = comparor.compare();
+            Assert.AreEqual("Tie", actual);
+        }
+    }
+
+    public class PokerHandsComparor
+    {
+        public string compare()
+        {
+            return "Tie";
         }
     }
 }
