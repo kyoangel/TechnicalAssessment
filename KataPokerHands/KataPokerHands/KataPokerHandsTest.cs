@@ -12,13 +12,13 @@ namespace KataPokerHands
             var actual = comparor.compare("", "");
             Assert.AreEqual("Tie", actual);
         }
-    }
 
-    public class PokerHandsComparor
-    {
-        public string compare(string black, string white)
+        [TestMethod]
+        public void HighCard_White_Win()
         {
-            return "Tie";
+            var comparor = new PokerHandsComparor();
+            var actual = comparor.compare("2H 3D 5S 9C KD", "2C 3H 4S 8C AH");
+            Assert.AreEqual("White wins. - with high card: Ace", actual);
         }
     }
 }
