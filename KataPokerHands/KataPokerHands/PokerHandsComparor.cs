@@ -33,6 +33,12 @@ namespace KataPokerHands
             {
                 return "Tie";
             }
+
+            if (white.EndsWith(black))
+            {
+                return "Tie";
+            }
+
             var blackList = black.Split(' ');
             var whiteList = white.Split(' ');
             if (cardValueMap[blackList[4][0].ToString()] > cardValueMap[whiteList[4][0].ToString()])
